@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-let Schema = mongoose.Schema;
-let OwnerSchema = new Schema({
+const Schema = mongoose.Schema;
+const OwnerSchema = new Schema({
   nameOfRestaurant: String,
   addresses: [{
     type: String
@@ -8,6 +8,11 @@ let OwnerSchema = new Schema({
   phone: {type: String, required: true},
   email: {type: String, unique: true},
   password: {type: String, required: true}
+});
+
+OwnerSchema.pre('save', function(next) {
+  this.type = 'owner';
+  next();
 });
 
 module.exports = mongoose.model('owner', OwnerSchema);
