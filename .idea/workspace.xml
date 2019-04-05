@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dc46a7b-d081-4b19-abaa-535eda5605d3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/errors/AccessError.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/UserController.js" afterPath="$PROJECT_DIR$/controllers/UserController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/cryptoHelper.js" afterPath="$PROJECT_DIR$/helpers/cryptoHelper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/generateToken.js" afterPath="$PROJECT_DIR$/helpers/generateToken.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/initEndpoints.js" afterPath="$PROJECT_DIR$/helpers/initEndpoints.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/authToken.js" afterPath="$PROJECT_DIR$/middleware/authToken.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Owner.js" afterPath="$PROJECT_DIR$/models/Owner.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/User.js" afterPath="$PROJECT_DIR$/models/User.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/UserRepository.js" afterPath="$PROJECT_DIR$/repository/UserRepository.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -308,12 +299,12 @@
       <workItem from="1553860675504" duration="1284000" />
       <workItem from="1554289554519" duration="839000" />
       <workItem from="1554294086950" duration="492000" />
-      <workItem from="1554477487459" duration="14143000" />
+      <workItem from="1554477487459" duration="14742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39920000" />
+    <option name="totallyTimeSpent" value="40519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
