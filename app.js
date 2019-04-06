@@ -6,7 +6,7 @@ const { port, localDB } = require('./config');
 
 mongoose
   .connect(localDB, {useNewUrlParser: true})
-  .catch(err => console.error(err));
+  .catch(err => process.exit(1));
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -38,4 +38,5 @@ initEndpoints(app);
 app.listen(port, (err) => {
   if (err) console.error(err);
   console.log('Listening...');
+  console.log(`server is on http://localhost:${port}/`);
 });

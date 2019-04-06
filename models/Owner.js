@@ -7,7 +7,8 @@ const OwnerSchema = new Schema({
   }],
   phone: {type: String, required: true},
   email: {type: String, unique: true},
-  password: {type: String, required: true}
+  password: {type: String, required: true},
+  type: String,
 });
 
 OwnerSchema.pre('save', function(next) {

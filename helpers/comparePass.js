@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const CustomError = require('../errors/CustomError');
-const { notCorrectPass } = require('../constants/errorsMessagesConstants');
+const { notCorrectPass } = require('../constants/errorMessageConstants');
 
 const comparePassword = (password, hashedPassword) => {
   try {
