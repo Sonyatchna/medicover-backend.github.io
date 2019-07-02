@@ -1,8 +1,8 @@
-const User = require('../models/User');
-const Owner = require('../models/Owner');
+const Client = require('../models/Client');
+const MedicalStaff = require('../models/MedicalStaff');
 const _ = require('lodash');
 const CustomError = require('../errors/CustomError');
-const { notCorrectPass, notCorrectLogin, userExists } = require('../constants/errorMessageConstants');
+const { notCorrectPass, notCorrectLogin } = require('../constants/errorMessageConstants');
 const { successfulAuthorization } = require('../constants/successMessageConstants');
 const generateToken = require('../helpers/generateToken');
 const comparePass = require('../helpers/comparePass');
@@ -10,7 +10,7 @@ const comparePass = require('../helpers/comparePass');
 module.exports = class AuthorizationRepository {
 
   static async login(loginBody) {
-    const people = [...await Owner.find({email: loginBody.email}).lean().exec(), ...await User.find({email: loginBody.email}).lean().exec()];
+    const people = [...await MedicalStaff.find({email: loginBody.email}).lean().exec(), ...await Client.find({email: loginBody.email}).lean().exec()];
     if (people.length === 1) {
       const findPerson = people[0];
       if (await comparePass(loginBody.password, findPerson.password)) {

@@ -1,11 +1,11 @@
-const { registerUser } = require('../controllers/UserController');
-const { registerOwner } = require('../controllers/OwnerController');
+const { registerClient } = require('../controllers/ClientController');
+const { registerMedicalStaff } = require('../controllers/MedicalStaffController');
 const { login } = require('../controllers/PersonController');
 
 function initEndpoints(app) {
-  app.post('/login', (req, res) => login(req, res));
-  app.post('/register/user', (req, res) => registerUser(req, res));
-  app.post('/register/owner', (req, res) => registerOwner(req, res));
+  app.post('/auth/login', (req, res) => login(req, res));
+  app.post('/auth/register/user', (req, res) => registerClient(req, res));
+  app.post('/auth/register/medical-staff', (req, res) => registerMedicalStaff(req, res));
 }
 
 module.exports = initEndpoints;
