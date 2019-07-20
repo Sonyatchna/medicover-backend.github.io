@@ -7,14 +7,14 @@ const hashPass = require('../helpers/cryptoHelper');
 module.exports = class AuthorizationRepository {
 
   static async registerClient(clientBody) {
-    const clients = await User.find({email: clientBody.email});
+    const clients = await Client.find({email: clientBody.email});
     if (clients.length > 0) throw new CustomError(userExists);
     await hashPass(clientBody);
     const client = new Client(clientBody);
     await client.save();
     return {
       message: successfulRegistration,
-      client
+      findPerson: client
     }
   }
 
