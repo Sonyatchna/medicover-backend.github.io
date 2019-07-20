@@ -1,9 +1,9 @@
 const jwt = require('jsonwebtoken');
 const { secret } = require('../config');
-const { notGetToken, notValidToken } = require('../errors/AccessError');
+const { notGetToken, notValidToken } = require('../constants/errorMessageConstants');
 const CustomError = require('../errors/CustomError');
 
-let checkToken = (req, res, next) => {
+const checkToken = (req, res, next) => {
   try {
     let token = req.headers['x-access-token'] || req.headers['authorization'];
     if (token.startsWith('JWT ')) {
