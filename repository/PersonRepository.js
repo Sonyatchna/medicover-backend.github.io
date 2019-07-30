@@ -10,6 +10,7 @@ const comparePass = require('../helpers/comparePass');
 module.exports = class AuthorizationRepository {
 
   static async login(loginBody) {
+    console.log(loginBody);
     const people = [...await MedicalStaff.find({email: loginBody.email}).lean().exec(), ...await Client.find({email: loginBody.email}).lean().exec()];
     if (people.length === 1) {
       const findPerson = people[0];
